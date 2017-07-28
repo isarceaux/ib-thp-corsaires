@@ -31,11 +31,11 @@
 
   <p> Au fait ce Corsaire est plutôt Kebab ou Hummus ?
     <br />
-    <%= radio_button_tag(:likeness,'Kebab') %>
-    <%= label_tag(:likeness, "Kebab, la base !") %>
+    <%= f.radio_button(:likeness,'Kebab') %>
+    <%= f.label(:likeness, "Kebab, la base !") %>
     <br />
-    <%= radio_button_tag(:likeness, 'Hummus') %>
-    <%= label_tag(:likeness, "Hummus, enfin...") %>
+    <%= f.radio_button(:likeness, 'Hummus') %>
+    <%= f.label(:likeness, "Hummus, enfin...") %>
   </p>
 
   <p>
