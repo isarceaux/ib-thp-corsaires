@@ -1,4 +1,20 @@
 <h1><%= @corsaire.first_name %></h1>
 <h2><%= @corsaire.age %></h2>
 
+
+
+<h3>Bio</h3>
+<p>
+  <%= to_show_if_not_nil( @corsaire.bio ) %>
+</p>
+
+
+<h3>Pseudos Slack et Github</h3>
+<p>
+  <ul>
+    <li>Slack : <%= to_show_if_not_nil( @corsaire.slack_handle ) %> </li>
+    <li>Github : <%= to_show_if_not_nil( @corsaire.github_handle ) %> </li>
+  </ul>
+</p>
+
 <p><%= link_to "Editer les informations", edit_corsaire_path %></p>

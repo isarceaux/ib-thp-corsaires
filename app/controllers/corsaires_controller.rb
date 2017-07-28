@@ -15,7 +15,8 @@ class CorsairesController < ApplicationController
   def create
     @corsaire = Corsaire.new(corsaire_params)
     if @corsaire.save
-      redirect_to root_path
+      flash[:success] = "Bravo ! Nouveau Corsaire créé avec succés !"
+      redirect_to @corsaire
     else
       render :new
     end
@@ -28,6 +29,7 @@ class CorsairesController < ApplicationController
   def update
     @corsaire = Corsaire.find(params[:id])
     if @corsaire.update(corsaire_params)
+      flash[:success] = "Bravo ! Nous avons pris en compte tes modifications !"
       redirect_to @corsaire
     else
       render :edit
@@ -47,7 +49,7 @@ class CorsairesController < ApplicationController
   private
 
     def corsaire_params
-      params.require(:corsaire).permit(:first_name, :age)
+      params.require(:corsaire).permit(:first_name, :age, :bio, :slack_handle, :github_handle)
     end
 
 

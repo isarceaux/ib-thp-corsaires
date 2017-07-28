@@ -15,12 +15,27 @@
   </p>
 
   <p>
-    <%= f.submit "Modifier le Corsaire" %>
+    <%= f.label :bio, value:'Rédige ta bio ici' %>
+    <%= f.text_field :bio, placeholder: "Par exemple raconte où est née ta Grand-Mère et qu'est-ce que tu as mangé au petit-déjeuner hier." %>
   </p>
 
-  <p>Si par hasard tu souhaites supprimer ce corsaire clique sur le lien suivant...</p>
+  <p>
+    <%= f.label :slack_handle, value:'Pseudo Slack' %>
+    <%= f.text_field :slack_handle %>
+  </p>
 
-  <%= link_to 'Clique pour détruire', @corsaire, method: :delete %>
+  <p>
+    <%= f.label :github_handle, value:'Pseudo Github' %>
+    <%= f.text_field :github_handle %>
+  </p>
+
+<p>
+  <%= f.submit "Modifier le Corsaire" %>
+</p>
+
+<p>Si par hasard tu souhaites supprimer ce corsaire clique sur le lien suivant...</p>
+
+<%= link_to 'Clique pour détruire', @corsaire, method: :delete %>
 
 
 <% end %>

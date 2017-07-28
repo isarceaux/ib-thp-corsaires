@@ -9,7 +9,12 @@
   </head>
 
   <body>
-  <%= render 'layouts/header' %>
+
+  <%= render 'layouts/header' %> <!-- The header is in a partial -->
+
+  <% flash.each do |message_type, message| %> <!-- This is to display a flash -->
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
     <%= yield %>
   </body>
 </html>
