@@ -1,0 +1,21 @@
+<h1>Page de création d'un Corsaire</h1>
+<p>Remplir le formulaire suivant pour créer un corsaire.</p>
+
+<%= form_for(@corsaire) do |f| %>
+
+  <p>
+    <%= f.label :first_name, value:'Prénom' %>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :first_name, value:'Age' %>
+    <%= f.number_field :age, in:1...120 %>
+  </p>
+
+  <p>
+    <%= f.submit "Créer le Corsaire !" %>
+  </p>
+
+
+<% end %>

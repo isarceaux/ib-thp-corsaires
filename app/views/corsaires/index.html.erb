@@ -1,0 +1,12 @@
+<h1>Liste des Corsaires</h1>
+<p>Voici la liste des magnifiques Corsaires !</p>
+
+<ul>
+<% @corsaires.each do |corsaire| %>
+  <li><%= corsaire.first_name %>, <%= corsaire.age %> ans, <%= link_to "voir plus...", corsaire %></li>
+<% end %>
+</ul>
+
+<p>Si jamais tu veux rajouter un corsaire tu peux !
+<br />
+<%= link_to "Rajouter un Corsaire", new_corsaire_path %></p>

@@ -1,0 +1,26 @@
+<h1>Page d'édition du Corsaire</h1>
+<p>Depuis cette page il est possible de modifier les informations du Corsaire.</p> 
+<p>Les anciennes informations sont déjà pré-remplies pour vous guider.</p>
+
+<%= form_for(@corsaire) do |f| %>
+
+  <p>
+    <%= f.label :first_name, value:'Prénom' %>
+    <%= f.text_field :first_name, placeholder: @corsaire.first_name %>
+  </p>
+
+  <p>
+    <%= f.label :first_name, value:'Age' %>
+    <%= f.number_field :age, in:1...120, placeholder: @corsaire.age %>
+  </p>
+
+  <p>
+    <%= f.submit "Modifier le Corsaire" %>
+  </p>
+
+  <p>Si par hasard tu souhaites supprimer ce corsaire clique sur le lien suivant...</p>
+
+  <%= link_to 'Clique pour détruire', @corsaire, method: :delete %>
+
+
+<% end %>
