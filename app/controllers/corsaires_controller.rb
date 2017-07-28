@@ -49,7 +49,7 @@ class CorsairesController < ApplicationController
   private
 
     def corsaire_params
-      params.require(:corsaire).permit(:first_name, :age, :bio, :slack_handle, :github_handle)
+      params.require(:corsaire).permit(:first_name, :age, :likeness, :bio, :slack_handle, :github_handle)
     end
 
 

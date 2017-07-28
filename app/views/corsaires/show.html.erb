@@ -17,4 +17,11 @@
   </ul>
 </p>
 
+<% if @corsaire.likeness != nil %>
+  
+  <h3>Kebab ou Hummus ?</h3>
+  <p>A cette question fondamentale, il semblerait que le Corsaire soit plutôt...
+  <em><%= @corsaire.likeness %></em> !</p>
+
+<% end %>
 <p><%= link_to "Editer les informations", edit_corsaire_path %></p>

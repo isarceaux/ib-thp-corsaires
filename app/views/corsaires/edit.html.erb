@@ -29,13 +29,21 @@
     <%= f.text_field :github_handle %>
   </p>
 
-<p>
-  <%= f.submit "Modifier le Corsaire" %>
-</p>
+  <p> Au fait ce Corsaire est plutôt Kebab ou Hummus ?
+    <br />
+    <%= radio_button_tag(:likeness,'Kebab') %>
+    <%= label_tag(:likeness, "Kebab, la base !") %>
+    <br />
+    <%= radio_button_tag(:likeness, 'Hummus') %>
+    <%= label_tag(:likeness, "Hummus, enfin...") %>
+  </p>
+
+  <p>
+    <%= f.submit "Modifier le Corsaire" %>
+  </p>
+
+<% end %>
 
 <p>Si par hasard tu souhaites supprimer ce corsaire clique sur le lien suivant...</p>
 
 <%= link_to 'Clique pour détruire', @corsaire, method: :delete %>
-
-
-<% end %>
